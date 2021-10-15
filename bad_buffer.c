@@ -4,17 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    // Allocate a 5 byte buffer
-    char buffer[5];
+    /* Allocate a 5 byte buffer */
+    char buffer[256];
 
-    // Check if we took a command line argument
-    if (argc < 2)
-    {
-        printf("Error, not enough arguments supplied\n");
-        exit(1);
-    }
-
-    strcpy(buffer, argv[1]);
+    gets(buffer); 
 
     return 0;
 }

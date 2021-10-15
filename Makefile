@@ -4,7 +4,7 @@ say_hello: say_hello.c
 	gcc say_hello.c -g -o say_hello.out
 
 bad_buffer: bad_buffer.c
-	gcc bad_buffer.c -g -o bad_buffer.out
+	gcc bad_buffer.c -g -o bad_buffer.out -z execstack -fno-stack-protector -std=c89
 
 clean:
 	rm bad_buffer.out say_hello.out
